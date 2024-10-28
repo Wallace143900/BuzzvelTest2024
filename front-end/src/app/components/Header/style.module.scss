@@ -1,0 +1,137 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../Header/photo.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 75%;
+    
+    position: relative;
+
+    @media(min-width: 425px) {
+        background-size: 80%;
+    }
+    
+    .navBar {
+        width: 90%; 
+        height: 300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px; 
+
+        @media(min-width: 375px) {
+            margin-bottom: 40px;
+        }
+
+        @media(min-width: 425px) {
+            margin-bottom: 80px;
+        }
+
+        .navLeft {
+            display: flex;
+            align-items: center;
+            width: 50%;
+
+            #h1{
+                margin-top: -240px;
+
+                @media(min-width: 375px) {
+                    font-size: 35px;
+                    margin-top: -230px;
+                }
+            }
+            
+            ul {
+                display: none;
+                gap: 20px;
+            }
+        }
+
+        .navRight {
+            display: flex;
+            gap: 10px;
+            
+            button {
+                display: none;
+    
+                &:hover {
+                    background-color: #e2e6ea; 
+                }
+            }
+        }
+
+    }
+
+    .viverra {
+        width: 90%;
+        height: 580px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        gap: 24px;
+
+        h1{
+            text-align: center;
+            width: 100%;
+            font-size: 36px;
+
+            @media(min-width: 375px) {
+                font-size: 40px;
+            }
+
+        }
+        
+        #bigP {
+            color: black;
+            text-align: center;
+            font-size: 15px;
+
+            @media(min-width: 375px) {
+                font-size: 18px;
+            }
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 88%;
+            font-size: 18px;
+            font-weight: 700;
+
+            svg{
+                margin-left: 40px;
+            }
+        }
+
+        #smallP{
+            margin-top: 30px;
+            text-align: start;
+        }
+
+        .blocoGirl {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            width: 100%;
+            
+            .dadosGirl{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: 5px;
+                gap: 5px;
+
+                small{
+                    color: #475569;
+                }
+            }
+        }
+    }
+    margin-bottom: 350px;
+}

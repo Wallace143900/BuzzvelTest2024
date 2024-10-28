@@ -1,0 +1,87 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 90%;
+
+        .paragraphTop{
+            font-family: var(--font-roboto);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17.6px;
+            text-align: center;
+            color: var(--orange-text);
+
+            @media(min-width: 375px) {
+                font-size: 16px;
+            }
+        }
+        
+        h2{
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+            @media(min-width: 375px) {
+                font-size: 34px;
+            }
+        }
+
+        #paragraphyID{
+            font-size: 14px;
+            text-align: center;
+            z-index: 1;
+
+            @media(min-width: 375px) {
+                font-size: 16px;
+            }
+
+            @media(min-width: 425px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .ball{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: -33px;
+
+        .yellowBall{
+            margin-left: -100px;
+            width: 245px;
+            height: 246px;
+        }
+
+        .purpleBall{
+            width: 205px;
+            height: 205px;
+            margin-top: 103px;
+            margin-right: -130px;
+        }
+    }
+
+    .divImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: -205px;
+
+        .image{
+            width: 95%;
+            height: 246px;
+            z-index: 2;
+            position: relative;
+        }
+    }
+
+}

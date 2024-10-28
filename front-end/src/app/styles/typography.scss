@@ -1,0 +1,75 @@
+.mobileTitle1{
+    font-family: var(--font-roboto);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--black-text);
+}
+
+.mobileSoller{
+    font-family: var(--font-roboto);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 35.2px;
+    color: var(--black-text);
+}
+
+.mobileParagraphy{
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28.8px;
+    color: var(--black-text);
+}
+
+.mobileParagraphySmall{
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: var(--black-text);
+}
+
+.mobileParagraphyYellow{
+    font-family: var(--font-roboto);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17.6px;
+    color: var(--yellow);
+}
+
+.mobilePurpleButton{
+    width: 306px;
+    height: 64px;
+    border-radius: 100px;
+    border: 2px solid var(--purple);
+    padding: 20px 24px 20px 24px;
+    color: var(--purple);
+    background-color: transparent;
+}
+
+.mobileTitle2{
+    font-family: var(--font-roboto);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 35.2px;
+    color: var(--black-text);
+}
+
+.mobileYellowButton{
+    width: 306px;
+    height: 64px;
+    border-radius: 100px;
+    border: 2px solid var(--yellow);
+    padding: 20px 24px 20px 24px;
+    color: var(--yellow);
+    background-color: transparent;
+}
+
+.mobileParagraphyStrong{
+    font-family: var(--font-roboto);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--black-text);
+}

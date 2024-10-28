@@ -1,16 +1,15 @@
 import Image from "next/image";
-import logo from "../../components/Header/logo.svg";
 import { IoHeadsetOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
 import photo2 from "../../components/Header/photoGirl.svg";
-
+import styles from "./style.module.scss";
 
 export default function Header() {
     return (
-        <header>
-            <nav>
-                <div>
-                    <Image src={logo} alt="Logo do site"/>
+        <header className={styles.header}>
+            <nav className={styles.navBar}>
+                <div className={styles.navLeft}>
+                    <h1 className="mobileSoller" id={styles.h1}>soller</h1>
                     <ul>
                         <li>Products</li>
                         <li>Solutions</li>
@@ -18,21 +17,21 @@ export default function Header() {
                         <li>Configure</li>
                     </ul>
                 </div>
-                <div>
+                <div className={styles.navRight}>
                     <button><IoHeadsetOutline /> 555 818 282</button><br/>
-                    <button>Request a Quote <FaArrowRight /></button>
+                    <button className="mobilePurpleButton">Request a Quote <FaArrowRight className={styles.icon} /></button>
                 </div>
             </nav>
-            <div>
-                <h1>Get the Sun to power your Home</h1>
-                <p>Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.</p>
-                <button>Request a Quote <FaArrowRight /></button>
-                <p>“Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”</p>
-                <div>
+            <div className={styles.viverra}>
+                <h1 className="mobileTitle1">Get the Sun to power your Home</h1>
+                <p className="mobileParagraphy" id={styles.bigP}>Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.</p>
+                <button className="mobilePurpleButton">Request a Quote <FaArrowRight /></button>
+                <p className="mobileParagraphySmall" id={styles.smallP}>“Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque faucibus.”</p>
+                <div className={styles.blocoGirl}>
                     <Image src={photo2} alt="Foto de uma menina"/>
-                    <div>
-                        <p>Rwanda Melflor</p>
-                        <small>zerowaste.com</small>
+                    <div className={styles.dadosGirl}>
+                        <p className="mobileParagraphy">Rwanda Melflor</p>
+                        <small className="mobileParagraphySmall">zerowaste.com</small>
                     </div>
                 </div>
             </div>

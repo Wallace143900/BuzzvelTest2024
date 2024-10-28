@@ -1,0 +1,33 @@
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 26px;
+
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+
+        .divLogo{
+            display: flex;
+            gap: 10px;
+
+            #image{
+                width: 55px;
+                height: 32px;
+            }
+        }
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 26px;
+    }
+}
