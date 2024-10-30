@@ -16,7 +16,7 @@ export default function AllThePower() {
                     <p className="mobileParagraphySmall" id={styles.pBottom}>Egestas fringilla aliquam leo</p>
                 </div>
             </div>
-            <Image src={computer} alt="Computer" id={styles.image} />
+            <Image src={computer} alt="Computer" id={styles.image} height="200" />
         </section>
     )
 }

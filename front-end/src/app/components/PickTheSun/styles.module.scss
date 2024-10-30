@@ -55,10 +55,24 @@
         position: relative;
         margin-top: -33px;
 
+        @media(min-width: 768px) {
+            margin-top: 20px;
+        }
+
         .yellowBall{
             margin-left: -100px;
             width: 245px;
             height: 246px;
+
+            @media (min-width: 425px) {
+                width: 50%;
+                height: auto;
+            }
+
+            @media(min-width: 768px) {
+                width: 380px;
+                height: 420px;
+            }
         }
 
         .purpleBall{
@@ -66,6 +80,16 @@
             height: 205px;
             margin-top: 103px;
             margin-right: -130px;
+
+            @media (min-width: 426px) {
+                width: 50%;
+                height: auto;
+            }
+
+            @media(min-width: 768px) {
+                width: 320px;
+                height: 380px;
+            }
         }
     }
 
@@ -78,9 +102,47 @@
 
         .image{
             width: 95%;
-            height: 246px;
+            height: auto;
             z-index: 2;
             position: relative;
+
+            @media (min-width: 375px) {
+                width: 90%;
+            }
+
+            @media (min-width: 425px) {
+                width: 85%;
+            }
+
+            @media (min-width: 435px) and (max-width: 505px) {
+                margin-top: -50px;
+            }
+
+            @media (min-width: 506px) and (max-width: 589px) {
+                margin-top: -80px;
+            }
+
+            @media (min-width: 570px) and (max-width: 620px) {
+                margin-top: -110px;
+            }
+
+            @media (min-width: 621px) and (max-width: 674px) {
+                margin-top: -130px;
+            }
+
+            @media (min-width: 675px) and (max-width: 720px) {
+                margin-top: -170px;
+            }
+
+            @media (min-width: 721px) and (max-width: 767px) {
+                margin-top: -150px;
+            }
+
+            @media(min-width: 768px) {
+                width: 85%;
+                height: auto;
+                margin-top: -205px;
+            }
         }
     }
 

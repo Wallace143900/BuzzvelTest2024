@@ -75,6 +75,12 @@
                 svg{
                     margin-left: 15px;
                 }
+
+                &:hover{
+                    background-color: var(--yellow);
+                    color: #78350F;
+                    transition: 0.3s;
+                }
             }
         }
     }

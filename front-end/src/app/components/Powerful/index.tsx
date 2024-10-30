@@ -30,7 +30,7 @@ export default function Powerful() {
                 </article>
             </div>
             <div className={styles.divImage}>
-                <Image src={image} alt="Imagem" id={styles.big}/>
+                <Image src={image} alt="Imagem" id={styles.big} height="491"/>
                 <Image src={ball} alt="Bola" id={styles.small}/>
             </div>
         </section>

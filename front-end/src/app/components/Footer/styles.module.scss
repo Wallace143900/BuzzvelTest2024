@@ -29,5 +29,21 @@
         justify-content: space-around;
         align-items: center;
         gap: 26px;
+        
+        li{
+            cursor: pointer;
+            border-bottom: 1px solid transparent;
+
+            &:hover{
+                border-bottom: 1px solid var(--black-text);
+                transition: 0.3s;
+                box-sizing: border-box;
+            }
+        }
+
+
+        @media(min-width: 768px) {
+            gap: 96px;
+        }
     }
 }

@@ -9,43 +9,131 @@
     background-size: 90% 523px;
     margin-bottom: 100px;
 
-    .divImage{
+    @media(min-width: 767px) {
+        background-size: 95% 619px;
+    }
+
+    @media(min-width: 768px) {
+        background-size: 95% 620px;
+    }
+
+    .divImage {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
-        
-        #big{
+
+        #big {
             width: 220px;
             height: 471px;
             margin-right: 20px;
             margin-bottom: 20px;
+            position: relative;
 
-            @media(min-width: 375px) {
-                margin-bottom: 30px;
+            @media(min-width: 521px) and (max-width: 767px) {
+                width: 60%;
+                height: auto;
             }
 
-            @media(min-width: 425px) {
-                margin-bottom: 35px;
+            @media(min-width: 768px) {
+                width: 35%;
+                height: auto;
             }
         }
-    
-        #small{
-            width: 200px;
-            height: 128.5px;
+
+        #small {
+            width: 32.8%;
+            height: auto;
             position: absolute;
             z-index: 1;
-            top: 148px;
-            right: -38px;
+            top: 30%; 
+            left: 64.5%;
 
-            @media(min-width: 375px) {
-                top: 148px;
-                right: -11px;
+            @media (min-width: 321px) and (max-width: 322px) {
+                width: 32%;
+                left: 64.5%;
+                height: auto;
             }
 
-            @media(min-width: 425px) {
-                right: 15px;
-                top: 147px;
+            @media (min-width: 323px) and (max-width: 335px) {
+                width: 32%;
+                left: 64.8%;
+                height: auto;
+            }
+
+            @media (min-width: 336px) {
+                width: 30.4%;
+                left: 64%;
+            }
+
+            @media (min-width: 337px) and (max-width: 338px) {
+                width: 30.3%;
+                left: 64%;
+            }
+
+            @media (min-width: 339px) and (max-width: 357px) {
+                width: 29.3%;
+                left: 63.3%;
+            }
+
+            @media (min-width: 358px) and (max-width: 374px) {
+                width: 28.5%;
+                left: 62.5%;
+            }
+
+            @media (min-width: 375px) {
+                width: 27.5%;
+                left: 62%;
+            }
+
+            @media (min-width: 376px) and (max-width: 389px) {
+                width: 27.5%;
+                top: 30%;
+                left: 62.6%;
+            }
+
+            @media (min-width: 390px) and (max-width: 407px) {
+                width: 26%;
+                left: 61.7%;
+            }
+
+            @media (min-width: 408px) and (max-width: 424px) {
+                width: 24.5%;
+                left: 61%;
+            }
+
+            @media (min-width: 425px) and (max-width: 433px) {
+                width: 24.5%;
+                left: 61%;
+            }
+
+            @media (min-width: 434px) and (max-width: 489px) {
+                width: 22%;
+                left: 60%;
+            }
+
+            @media (min-width: 490px) and (max-width: 520px) {
+                width: 21%;
+                left: 59.6%;
+            }
+
+            @media(min-width: 521px) and (max-width: 767px) {
+                top: 29.7%;
+                left: 63.5%;
+                width: 28.6%;
+            }
+
+            @media(min-width: 768px){
+                width: 28.9%;
+                height: 157px;
+                top: 29.6%;
+                left: 51.5%;
+            }
+
+            @media (min-width: 800px) and (max-width: 1023px) {
+                width: 16.5%;
+                left: 57.8%;
+                height: auto;
             }
         }
     }
@@ -109,6 +197,14 @@
             justify-content: space-between;
             width: 100%;
             gap: 26px;
+
+            @media(min-width: 767px) {
+                margin-bottom: 40px;
+            }
+
+            @media(min-width: 768px) {
+                margin-bottom: 40px;
+            }
 
             .information{
                 width: 45%;

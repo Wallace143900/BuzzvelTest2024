@@ -1,7 +1,6 @@
 import Image from "next/image";
 import yellow from "../../components/PickTheSun/yellowBall.svg";
 import purple from "../../components/PickTheSun/purpleBall.svg";
-import image from "../../components/PickTheSun/image.svg";
 import styles from "./styles.module.scss";
 import imageMobile from "../../components/PickTheSun/imagemMobile.svg";
 
