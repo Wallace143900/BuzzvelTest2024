@@ -1,39 +1,38 @@
 # Buzzvel 2024 - Ready to 2025: Dev Team Test
 
-Este repositório contém a implementação de uma landing page responsiva desenvolvida com **Next.js**, baseada no design fornecido pela Buzzvel no **Figma**. O projeto foi criado com foco em interatividade, responsividade e otimização de desempenho, atendendo aos critérios exigidos para a vaga de desenvolvedor front-end.
+This repository contains the implementation of a responsive landing page developed with **Next.js**, based on the design provided by Buzzvel in **Figma**. The project was created with a focus on interactivity, responsiveness, and performance optimization, meeting the criteria required for the front-end developer position.
 
-## 📝 Sobre o Teste
+## 📝 About the Test
 
-- **Período de Candidatura**: 15-22 de Outubro de 2024
-- **Revisão de Código**: 23-30 de Novembro de 2024
-- **Entrevistas**: 01-13 de Novembro de 2024
-- **Decisão Final**: 26 de Novembro de 2024
+- **Application Period**: October 15-22, 2024
+- **Code Review**: October 23-30, 2024
+- **Interviews**: November 1-13, 2024
+- **Final Decision**: November 26, 2024
 
-**Instruções**:
-- Converti o design do **Figma** em páginas web e mobile completamente funcionais.
-- Tecnologias principais: **Next.js** para renderização do lado do servidor (SSR) e **React**.
-- O design final é totalmente responsivo e otimizado para desempenho e SEO.
+**Instructions**:
+- I converted the **Figma** design into fully functional web and mobile pages.
+- Main technologies used: **Next.js** for server-side rendering (SSR) and **React**.
+- The final design is fully responsive and optimized for performance and SEO.
 
-## 🎯 Objetivo do Projeto
+## 🎯 Project Goal
 
-Implementar uma interface que adere estritamente ao design fornecido, com animações e otimização para SEO e desempenho.
+To implement an interface that strictly adheres to the provided design, with animations and optimization for SEO and performance.
 
-## 🚀 Tecnologias e Ferramentas
+## 🚀 Technologies and Tools
 
-- **Next.js**: Framework utilizado para SSR e otimização de SEO.
-- **React**: Biblioteca para a construção de uma Single Page Application (SPA) e reaproveitamento de componentes.
-- **TypeScript**: Aumento da segurança no código.
-- **CSS3 e Sass**: Estilização e criação de animações.
-- **Animações**: Animações com CSS3 e Framer Motion para uma experiência de usuário mais fluida.
+- **Next.js**: Framework used for SSR and SEO optimization.
+- **React**: Library for building a Single Page Application (SPA) and component reuse.
+- **TypeScript**: Enhances code safety.
+- **CSS3 and Sass**: Styling and animation creation.
+- **Animations**: CSS3 animations and Framer Motion for a smoother user experience.
 
-## 📐 Prototipação e Design
+## 📐 Prototyping and Design
 
-A implementação seguiu de perto o design do Figma para ambos os protótipos (web e mobile):
+The implementation closely followed the Figma design for both prototypes (web and mobile):
 
+## 🌟 Implemented Features
 
-## 🌟 Funcionalidades Implementadas
-
-- **Responsividade Total**: O layout se adapta automaticamente a dispositivos móveis, tablets e desktops.
-- **Interatividade**: Vários elementos interativos que melhoram a experiência de navegação.
-- **SEO e Performance**: Técnicas de SEO aplicadas, como meta tags e HTML semântico, com carregamento lazy loading para melhorar o desempenho.
-- **Animações**: Animações CSS3 foram implementadas. Esforço foi dado para animar os cards na seção **'Make Something'**, mas, devido a tempo limitado, a animação dos cards não foi finalizada. A animação do modal na resolução 768px foi concluída com sucesso.
+- **Total Responsiveness**: The layout automatically adapts to mobile devices, tablets, and desktops.
+- **Interactivity**: Various interactive elements that enhance the browsing experience.
+- **SEO and Performance**: SEO techniques applied, such as meta tags and semantic HTML, with lazy loading to improve performance.
+- **Animations**: CSS3 animations were implemented. Effort was made to animate the cards in the **'Make Something'** section, but due to time constraints, the card animation was not completed. The modal animation at the 768px resolution was successfully finished.
