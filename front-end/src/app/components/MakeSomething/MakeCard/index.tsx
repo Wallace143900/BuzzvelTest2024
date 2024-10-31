@@ -7,11 +7,18 @@ import styles from "./styles.module.scss";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 export default function MakeCard() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [viewSize, setViewSize] = useState("mobile");
+  const [animationClass, setAnimationClass] = useState("");
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 768);
+    if (window.innerWidth < 768) {
+      setViewSize("mobile");
+    } else if (window.innerWidth < 1024) {
+      setViewSize("tablet");
+    } else {
+      setViewSize("desktop");
+    }
   };
 
   useEffect(() => {
@@ -21,73 +28,98 @@ export default function MakeCard() {
   }, []);
 
   const handleNext = () => {
-    if (isMobile) {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % comments.length);
-    } else {
-      setCurrentIndex((prevIndex) => (prevIndex + 2) % comments.length);
-    }
+    const increment = viewSize === "tablet" ? 2 : 1;
+    setAnimationClass(styles.slideLeft);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + increment) % comments.length);
+      setAnimationClass(""); 
+    }, 300); 
   };
 
   const handlePrev = () => {
-    if (isMobile) {
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + comments.length) % comments.length);
+    const decrement = viewSize === "tablet" ? 2 : 1;
+    setAnimationClass(styles.slideRight);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex - decrement + comments.length) % comments.length);
+      setAnimationClass(""); 
+    }, 300); 
+  };
+
+  const renderCards = () => {
+    const totalComments = comments.length;
+
+    if (viewSize === "mobile") {
+      return (
+        <div className={`${styles.card} ${animationClass}`}>
+          <p className="mobileParagraphySmall" id={styles.pTop}>
+            {comments[currentIndex].comment}
+          </p>
+          <div className={styles.divUser}>
+            <Image
+              src={comments[currentIndex].photo}
+              alt={comments[currentIndex].name}
+              width={50}
+              height={50}
+            />
+            <div className={styles.comments}>
+              <p className="mobileParagraphySmall">{comments[currentIndex].name}</p>
+              <small className={styles.p}>{comments[currentIndex].kvh}</small>
+            </div>
+          </div>
+        </div>
+      );
+    } else if (viewSize === "tablet") {
+      return (
+        <>
+          {[(currentIndex + 0) % totalComments, (currentIndex + 1) % totalComments].map((index) => (
+            <div key={index} className={`${styles.card} ${animationClass}`}>
+              <p className="mobileParagraphySmall" id={styles.pTop}>
+                {comments[index].comment}
+              </p>
+              <div className={styles.divUser}>
+                <Image
+                  src={comments[index].photo}
+                  alt={comments[index].name}
+                  width={50}
+                  height={50}
+                />
+                <div className={styles.comments}>
+                  <p className="mobileParagraphySmall">{comments[index].name}</p>
+                  <small className={styles.p}>{comments[index].kvh}</small>
+                </div>
+              </div>
+            </div>
+          ))}
+        </>
+      );
     } else {
-      setCurrentIndex((prevIndex) => (prevIndex - 2 + comments.length) % comments.length);
+      return comments.map((comment, index) => (
+        <div
+          key={index}
+          className={`${styles.card} ${index === currentIndex ? `${styles.active} ${animationClass}` : ""}`}
+        >
+          <p className="mobileParagraphySmall" id={styles.pTop}>
+            {comment.comment}
+          </p>
+          <div className={styles.divUser}>
+            <Image src={comment.photo} alt={comment.name} width={50} height={50} />
+            <div className={styles.comments}>
+              <p className="mobileParagraphySmall">{comment.name}</p>
+              <small className={styles.p}>{comment.kvh}</small>
+            </div>
+          </div>
+        </div>
+      ));
     }
   };
 
   return (
-    <>
-      <article className={styles.article}>
-        <div className={styles.cardsContainer}>
-          {isMobile ? (
-            <div className={`${styles.card} ${styles.active}`}>
-              <p className="mobileParagraphySmall" id={styles.pTop}>
-                {comments[currentIndex].comment}
-              </p>
-              <div className={styles.divUser}>
-                <Image src={comments[currentIndex].photo} alt={comments[currentIndex].name} width={50} height={50} />
-                <div className={styles.comments}>
-                  <p className="mobileParagraphySmall">{comments[currentIndex].name}</p>
-                  <small className={styles.p}>{comments[currentIndex].kvh}</small>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <>
-              <div className={styles.card}>
-                <p className="mobileParagraphySmall" id={styles.pTop}>
-                  {comments[currentIndex].comment}
-                </p>
-                <div className={styles.divUser}>
-                  <Image src={comments[currentIndex].photo} alt={comments[currentIndex].name} width={50} height={50} />
-                  <div className={styles.comments}>
-                    <p className="mobileParagraphySmall">{comments[currentIndex].name}</p>
-                    <small className={styles.p}>{comments[currentIndex].kvh}</small>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.card}>
-                <p className="mobileParagraphySmall" id={styles.pTop}>
-                  {comments[(currentIndex + 1) % comments.length].comment}
-                </p>
-                <div className={styles.divUser}>
-                  <Image
-                    src={comments[(currentIndex + 1) % comments.length].photo}
-                    alt={comments[(currentIndex + 1) % comments.length].name}
-                    width={50}
-                    height={50}
-                  />
-                  <div className={styles.comments}>
-                    <p className="mobileParagraphySmall">{comments[(currentIndex + 1) % comments.length].name}</p>
-                    <small className={styles.p}>{comments[(currentIndex + 1) % comments.length].kvh}</small>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
-        </div>
+    <article className={styles.article}>
+      <div className={`${styles.cardsContainer}`}>
+        {renderCards()}
+      </div>
 
+      {viewSize && (
         <div className={styles.divButton}>
           <button onClick={handlePrev}>
             <FaArrowLeft />
@@ -96,7 +128,7 @@ export default function MakeCard() {
             <FaArrowRight />
           </button>
         </div>
-      </article>
-    </>
+      )}
+    </article>
   );
 }

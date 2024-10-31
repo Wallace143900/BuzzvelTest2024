@@ -1,149 +1,235 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
 
-    .top{
+    @media (min-width: 426px) and (max-width: 767px) {
+        height: 700px;
+    }
+
+    @media (min-width: 768px) {
+        height: 900px;
+    }
+
+    @media (min-width: 1024px) {
+        height: 950px;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1439px) {
+        height: 1100px;
+    }
+
+    @media (min-width: 1440px) {
+        height: 1150px;
+    }
+
+    .top {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin: 0 auto;
-        width: 90%;
+        margin-bottom: 20px;
+        width: 100%;
 
-        .paragraphTop{
+        .paragraphTop {
             font-family: var(--font-roboto);
             font-weight: 500;
             font-size: 14px;
-            line-height: 17.6px;
-            text-align: center;
             color: var(--orange-text);
 
             @media(min-width: 375px) {
                 font-size: 16px;
             }
-        }
-        
-        h2{
-            margin-top: 10px;
-            margin-bottom: 20px;
 
-            @media(min-width: 375px) {
-                font-size: 34px;
+            @media(min-width: 1440px) {
+                font-size: 20px;
             }
         }
 
-        #paragraphyID{
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 34px;
+
+            @media (min-width: 1440px) {
+                font-size: 56px;
+            }
+        }
+
+        #paragraphyID {
             font-size: 14px;
-            text-align: center;
-            z-index: 1;
+            width: 100%;
 
             @media(min-width: 375px) {
                 font-size: 16px;
             }
 
-            @media(min-width: 425px) {
+            @media (min-width: 425px) {
                 font-size: 18px;
             }
+
+            @media(min-width: 1024px) {
+                font-size: clamp(14px, 2vw + 0.5rem, 12px);
+                line-height: clamp(28px, 1.8vw + 1rem, 31px);
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                display: -webkit-box; 
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical; 
+                width: 60%; 
+                margin: 0 auto;
+            }
+
+            @media(min-width: 1440px) {
+                font-size: clamp(16px, 2vw + 0.5rem, 19px);
+                line-height: clamp(28px, 1.8vw + 1rem, 31px);
+                width: 60%; 
+                margin: 0 auto;
+            }
         }
     }
 
-    .ball{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: url("../../components/PickTheSun/yellowBall.svg") no-repeat;
+        background-size: cover;
+        left: -100px;
+        top: 190px;
+        z-index: 0;
+        background-size: 65%;
+
+        @media (min-width: 426px) and (max-width: 596px) {
+            top: 200px;
+            right: -150px;
+            background-size: 85%;
+            width: 50%;
+            height: 500px;
+        }
+
+        @media (min-width: 597px) and (max-width: 767px) {
+            top: 150px;
+            left: -105px;
+            background-size: 85%;
+            width: 45%;
+            height: 500px;
+        }
+
+        @media (min-width: 768px) {
+            top: 150px;
+            left: -150px;
+            background-size: 85%;
+            width: 50%;
+            height: 500px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1023px) {
+            top: 200px;
+            left: -150px;
+            background-size: 85%;
+            width: 50%;
+            height: 500px;
+        }
+
+        @media (min-width: 1024px) {
+            top: 110px;
+            right: -150px;
+            background-size: 85% 490px;
+            width: 60%;
+            height: 520px;
+        }
+
+        @media (min-width: 1440px) {
+            top: 110px;
+            right: -150px;
+            background-size: 85% 650px;
+            width: 50%;
+            height: 680px;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: url("../../components/PickTheSun/purpleBall.svg") no-repeat;
+        background-size: cover;
+        right: -220px;
+        top: 275px;
+        z-index: 0;
+        background-size: 55%;
+
+        @media (min-width: 426px) and (max-width: 596px) {
+            top: 280px;
+            right: -150px;
+            background-size: 85%;
+            width: 50%;
+            height: 500px;
+        }
+
+        @media (min-width: 597px) and (max-width: 767px) {
+            top: 260px;
+            right: -150px;
+            background-size: 85%;
+            width: 50%;
+            height: 500px;
+        }
+
+        @media (min-width: 768px) {
+            top: 260px;
+            right: -150px;
+            background-size: 85%;
+            width: 50%;
+            height: 500px;
+        }
+
+        @media (min-width: 1024px) {
+            top: 310px;
+            right: -150px;
+            background-size: 85% 350px;
+            width: 50%;
+            height: 600px;
+        }
+
+        @media (min-width: 1440px) {
+            top: 310px;
+            right: -350px;
+            background-size: 85% 550px;
+            width: 50%;
+            height: 700px;
+        }
+    }
+
+    .divImage {
         position: relative;
-        margin-top: -33px;
-
-        @media(min-width: 768px) {
-            margin-top: 20px;
-        }
-
-        .yellowBall{
-            margin-left: -100px;
-            width: 245px;
-            height: 246px;
-
-            @media (min-width: 425px) {
-                width: 50%;
-                height: auto;
-            }
-
-            @media(min-width: 768px) {
-                width: 380px;
-                height: 420px;
-            }
-        }
-
-        .purpleBall{
-            width: 205px;
-            height: 205px;
-            margin-top: 103px;
-            margin-right: -130px;
-
-            @media (min-width: 426px) {
-                width: 50%;
-                height: auto;
-            }
-
-            @media(min-width: 768px) {
-                width: 320px;
-                height: 380px;
-            }
-        }
-    }
-
-    .divImage{
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
-        margin-top: -205px;
+        z-index: 1;
 
-        .image{
-            width: 95%;
+        .image {
+            width: 90%;
+            max-width: 1520px;
             height: auto;
-            z-index: 2;
-            position: relative;
+            margin-top: 40px;
 
-            @media (min-width: 375px) {
+            @media (min-width: 1024px) {
+                margin-top: 20px;
+            }
+
+            @media (min-width: 1440px) {
                 width: 90%;
-            }
-
-            @media (min-width: 425px) {
-                width: 85%;
-            }
-
-            @media (min-width: 435px) and (max-width: 505px) {
-                margin-top: -50px;
-            }
-
-            @media (min-width: 506px) and (max-width: 589px) {
-                margin-top: -80px;
-            }
-
-            @media (min-width: 570px) and (max-width: 620px) {
-                margin-top: -110px;
-            }
-
-            @media (min-width: 621px) and (max-width: 674px) {
-                margin-top: -130px;
-            }
-
-            @media (min-width: 675px) and (max-width: 720px) {
-                margin-top: -170px;
-            }
-
-            @media (min-width: 721px) and (max-width: 767px) {
-                margin-top: -150px;
-            }
-
-            @media(min-width: 768px) {
-                width: 85%;
                 height: auto;
-                margin-top: -205px;
             }
         }
     }
-
 }

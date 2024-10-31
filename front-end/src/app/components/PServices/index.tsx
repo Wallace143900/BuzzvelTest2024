@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function PServices() {
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="services">
             <div className={styles.divImage} >
                 <Image src={image} alt="Imagem" id={styles.big}></Image>
                 <Image src={small} alt="Imagem pequena" id={styles.small} />

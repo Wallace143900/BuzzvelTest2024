@@ -5,15 +5,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../AllThePower/purpleBall.svg');
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkxIiBoZWlnaHQ9IjE4MSIgdmlld0JveD0iMCAwIDE5MSAxODEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxlbGxpcHNlIGN4PSI4IiBjeT0iMTgyLjQ5OSIgcng9IjE4MyIgcnk9IjE4Mi41IiBmaWxsPSIjQTg1NUY3Ii8+Cjwvc3ZnPgo=');
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 40%;
     position: relative;
 
+        @media (min-width: 1024px) {
+            background-position: top right;
+            background-size: 100vw 200vh;
+        }
+
+
     .container {
         width: 90%;
         margin: 0 auto;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
 
         .top {
             display: flex;
@@ -23,20 +36,40 @@
             position: relative;
             margin-bottom: 40px;
 
+            @media (min-width: 1024px) {
+                width: 65%;
+                justify-content: flex-end;
+                align-items: flex-start;
+                margin-left: 60px;
+            }
+            
             #pYellow {
                 color: var(--yellow);
                 position: absolute;
                 top: -25px;
                 margin-top: 35px;
+
+                @media (min-width: 1024px) {
+                    font-size: 20px;
+                    line-height: 22px;
+                    text-align: start;
+                }
             }
 
             h2 {
                 margin-top: 40px;
                 color: white;
-                font-size: 2rem;  // Usando rem para responsividade
+                font-size: 2rem; 
 
                 @media (min-width: 425px) {
                     font-size: 2.5rem;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: 40px;
+                    line-height: 61.6px;
+                    text-align: start;
+                    width: 100%;
                 }
             }
         }
@@ -47,12 +80,18 @@
             align-items: center;
             gap: 26px;
 
+            @media (min-width: 1024px) {
+                width: 45%;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+
             button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 88%;
-                font-size: 1rem;  // Usando rem para responsividade
+                font-size: 1rem;  
                 font-weight: 700;
 
                 svg {
@@ -64,11 +103,20 @@
                     color: #78350F;
                     transition: 0.3s;
                 }
+
+                @media (min-width: 1024px) {
+                    width: 306px;
+                    height: 64px;
+                }
             }
 
             #pBottom {
                 color: white;
                 font-weight: 400;
+
+                @media (min-width: 1024px) {
+                    margin-right: 50px;
+                }
             }
         }
 

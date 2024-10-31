@@ -5,7 +5,7 @@ import computer from "./computer.svg";
 
 export default function AllThePower() {
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="configure">
             <div className={styles.container}>
                 <div className={styles.top}>
                     <p className="mobileParagraphyYellow" id={styles.pYellow}>Get the Sun to power your home</p>

@@ -21,6 +21,13 @@ export default function Header() {
         }
     };
 
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <header className={styles.header}>
             <nav className={styles.navBar}>
@@ -28,10 +35,10 @@ export default function Header() {
                     <div className={styles.divleft}>
                         <h1 className="mobileSoller" id={styles.h1}>soller</h1>
                         <ul>
-                            <li>Products</li>
-                            <li>Solutions</li>
-                            <li>Services</li>
-                            <li>Configure</li>
+                        <li onClick={() => scrollToSection('products')}>Products</li>
+                            <li onClick={() => scrollToSection('solutions')}>Solutions</li>
+                            <li onClick={() => scrollToSection('services')}>Services</li>
+                            <li onClick={() => scrollToSection('configure')}>Configure</li>
                         </ul>
                     </div>
                     <div className={styles.navRightButton}>
@@ -52,14 +59,14 @@ export default function Header() {
                             <FaTimes />
                         </button>
                         <ul>
-                            <li>Products</li>
-                            <li>Solutions</li>
-                            <li>Services</li>
-                            <li>Configure</li>
+                        <li onClick={() => scrollToSection('products')}>Products</li>
+                            <li onClick={() => scrollToSection('solutions')}>Solutions</li>
+                            <li onClick={() => scrollToSection('services')}>Services</li>
+                            <li onClick={() => scrollToSection('configure')}>Configure</li>
                         </ul>
                         <div className={styles.navRightModal}>
-                            <button><IoHeadsetOutline /> 555 818 282</button><br />
-                            <button className="mobilePurpleButton">Request a Quote <FaArrowRight className={styles.icon} /></button>
+                            <button className={styles.tel}><IoHeadsetOutline /> 555 818 282</button><br />
+                            <button className="mobilePurpleButton" id={styles.btn}>Request a Quote <FaArrowRight className={styles.icon} /></button>
                         </div>
                     </div>
                 </div>

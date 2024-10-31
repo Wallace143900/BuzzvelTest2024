@@ -7,19 +7,63 @@
     padding-bottom: 40px;
     gap: 26px;
 
+    @media (min-width: 1024px) {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .top{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 26px;
 
+        @media (min-width: 1024px) {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 10px;
+        }
+
         .divLogo{
             display: flex;
             gap: 10px;
 
+            @media (min-width: 1024px) {
+                width: 50%;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
             #image{
                 width: 55px;
                 height: 32px;
+            }
+        }
+
+        .p{
+
+            p{
+                @media (min-width: 1024px) {
+                    margin-left: 10px;
+                    font-size: 16px;
+                    line-height: 22.4px;
+                    width: 100%;
+                }
+
+                @media (min-width: 1440px) {
+                    margin-left: -35px;
+                    font-size: 16px;
+                    line-height: 22.4px;
+                }
+            }
+            @media (min-width: 1024px) {
+                width: 100%;
+                margin-right: 20px;
             }
         }
     }
@@ -29,6 +73,16 @@
         justify-content: space-around;
         align-items: center;
         gap: 26px;
+
+        @media(min-width: 768px) {
+            gap: 96px;
+        }
+
+        @media (min-width: 1024px) {
+            width: 30%;
+            gap: 26px;
+            justify-content: flex-end;
+        }
         
         li{
             cursor: pointer;
@@ -39,11 +93,6 @@
                 transition: 0.3s;
                 box-sizing: border-box;
             }
-        }
-
-
-        @media(min-width: 768px) {
-            gap: 96px;
         }
     }
 }
